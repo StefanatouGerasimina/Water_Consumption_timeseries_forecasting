@@ -90,3 +90,5 @@ The seasonal component displays a yearly repeating pattern within the data at re
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/residuals.png" width="700" height="320">
 The residual plot displays the random fluctuations after the extraction of its trend and seasonality.  The plot exhibits occasional spikes, potentially indicating outliers or unusual occurrences not accounted for, by the model. However, the absence of a systematic pattern in the residuals is positive, indicating effective isolation of the trend and seasonal components from the initial data.
 
+## Timeseries Correlation
+
