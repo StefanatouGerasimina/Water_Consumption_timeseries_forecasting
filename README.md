@@ -92,3 +92,12 @@ The residual plot displays the random fluctuations after the extraction of its t
 
 ## Timeseries Correlation
 
+### Lag plot
+
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/lag_plot.png" width="700" height="320">
+Positive autocorrelation: Strong relation between the 2 sequenced daily water consumption units. In other words, high water consumption on one day is likely to be followed by high consumption the next day, and similar for the low values. There are some data points that deviate from the diagonal line, which could be outliers or anomalies, but overall the spread of the points is tight which suggests a strong autocorrelation between the data points.
+
+### Autocorrelation Plot
+
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/auto_correlation.png" width="700" height="320">
+The first bar indicates the autocorrelation at lag 1, which is close to 0.8 suggesting a strong autocorrelation from one day to another. There seems to be strong Positive Autocorrelation at shorter lags suggesting high day to day relationship in water consumption, while the Gradual decrease of autocorrelation over lag,  suggests that past values have significant effect on the future values, persistently.Finaly there might be a possible weekly seasonality, as the lags 7, 14 21 etc seem to have significant peeks.
