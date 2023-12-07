@@ -131,22 +131,31 @@ LSTM 2: LSTM layer - Dropout layer - LSTM layer - Dropout layer - Dense layer - 
 #### 7 DAYS
 
 **Accuracy**
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l1_7_acc.png" width="700" height="320">
+
 **Loss**
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l1_7_loss.png" width="700" height="320">
 
 #### 30 DAYS
 
 **Accuracy**
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l1_30_acc.png" width="700" height="320">
+
 **Loss**
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l1_30_loss.png" width="700" height="320">
 
 #### 365 DAYS
 
 **Accuracy**
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l1_365_acc.png" width="700" height="320">
+
 **Loss**
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l1_365_loss.png" width="700" height="320">
 
 #### Comparison and thoughts:
@@ -179,23 +188,31 @@ LSTM 2: LSTM layer - Dropout layer - LSTM layer - Dropout layer - Dense layer - 
 #### 7 DAYS
 
 **Accuracy**
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_7_acc.png" width="700" height="320">
+
 **Loss**
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_7_loss.png" width="700" height="320">
 
 #### 30 DAYS
+
 
 **Accuracy**
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_30_acc.png" width="700" height="320">
 
 **Loss**
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_30_loss.png" width="700" height="320">
+
 #### 365 DAYS
 
 **Accuracy**
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_365_acc.png" width="700" height="320">
 
 **Loss**
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_365_loss.png" width="700" height="320">
 
 #### Comparison and thoughts:
