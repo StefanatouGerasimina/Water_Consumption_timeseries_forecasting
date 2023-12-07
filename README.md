@@ -12,9 +12,8 @@ The given dataset, provides hourly data on water consumption for the years 2002 
 - Consumption: This column shows the water consumption, presumably measured in a specific unit during each  datetime.
 
 An example of the hourly water consumption timeseries is shown bellow:
-![timeseries_hourly](https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/timeseries_hourly.png)
-<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/timeseries_hourly.png" width="200" height="200" alt="Example Image">
 
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/timeseries_hourly.png" width="200" height="180">
 
 
 ## Basic Statistics
