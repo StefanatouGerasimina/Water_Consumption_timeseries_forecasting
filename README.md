@@ -150,10 +150,7 @@ LSTM 2: LSTM layer - Dropout layer - LSTM layer - Dropout layer - Dense layer - 
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l1_365_loss.png" width="700" height="320">
 #### Comparison and thoughts:
 
-Look back	RMSE	MAE	MAPE (%)
-7	50298.7788	38121.7317	4.98562
-30	46829.9067	35608.9012	4.68242
-365	44326.1181	32747.1906	4.22688<img width="550" alt="image" src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/assets/63111398/fb5a8dd2-b62e-4838-a455-0da88313eeac">
+<img width="550" alt="image" src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/assets/63111398/fb5a8dd2-b62e-4838-a455-0da88313eeac">
 
 - **RMSE** tends to highlight large errors more than MAE due to the squaring of errors. This can make RMSE more sensitive to outliers compared to MAE.
 - **MAE** gives a linear representation of errors, meaning that all errors are treated equally.
