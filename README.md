@@ -181,21 +181,25 @@ Look back	RMSE	MAE	MAPE (%)
 #### 7 DAYS
 
 **Accuracy**
-<img src="" width="700" height="320">
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_7_acc.png" width="700" height="320">
 **Loss**
-<img src="" width="700" height="320">
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_7_loss.png" width="700" height="320">
+
 #### 30 DAYS
 
 **Accuracy**
-<img src="" width="700" height="320">
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_30_acc.png" width="700" height="320">
+
 **Loss**
-<img src="" width="700" height="320">
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_30_loss.png" width="700" height="320">
 #### 365 DAYS
 
 **Accuracy**
-<img src="" width="700" height="320">
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_365_acc.png" width="700" height="320">
+
 **Loss**
-<img src="" width="700" height="320">
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_365_loss.png" width="700" height="320">
+
 #### Comparison and thoughts:
 Look back	RMSE	MAE	MAPE (%)
 7	50689.8165	38091.9837	4.922317
