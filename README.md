@@ -13,7 +13,7 @@ The given dataset, provides hourly data on water consumption for the years 2002 
 
 An example of the hourly water consumption timeseries is shown bellow:
 
-<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/timeseries_hourly.png" width="200" height="180">
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/timeseries_hourly.png" width="700" height="300">
 
 
 ## Basic Statistics
