@@ -14,12 +14,15 @@ The given dataset, provides hourly data on water consumption for the years 2002 
 An example of the hourly, daily and weekly water consumption timeseries is shown bellow:
 
 *Hourly Water Consumption*
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/timeseries_hourly.png" width="700" height="320">
 
 *Daily Water Consumption*
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/timeseries_daily.png" width="700" height="320">
 
 *Weekly Water Consumption*
+
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/timeseries_weekly.png" width="700" height="320">
 
 ## Basic Statistics
