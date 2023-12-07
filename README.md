@@ -101,3 +101,130 @@ Positive autocorrelation: Strong relation between the 2 sequenced daily water co
 
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/auto_correlation.png" width="700" height="320">
 The first bar indicates the autocorrelation at lag 1, which is close to 0.8 suggesting a strong autocorrelation from one day to another. There seems to be strong Positive Autocorrelation at shorter lags suggesting high day to day relationship in water consumption, while the Gradual decrease of autocorrelation over lag,  suggests that past values have significant effect on the future values, persistently.Finaly there might be a possible weekly seasonality, as the lags 7, 14 21 etc seem to have significant peeks.
+
+## Stationarity
+
+In order to create a sufficient time series forecasting model, we need consistency of distributions (Stationarity).  It doesn’t need to be strongly stationary a weak stationarity is also acceptable as long as the the way the variables relate to each other is consistent through time and depends only on the lag between each observations, while the mean and variance must remain constant over time.
+
+### ADF Testing
+
+H0: Null Hypothesis assuming the time series is non-stationary, based on the presence of a unit-root.
+H1: Alternative Hypothesis proving the time series does not have a unit root, thus is stationary.
+
+The ADF test statistic is calculated from the estimated coefficient on the lagged values of the time series. The more negative the test statistic, the stronger the rejection of the null hypothesis
+
+**ADF STATISTIC**: -7.979174
+**P VALUE**: 2.651789445842063e-12
+**CRITICAL VALUES**: 1%: -3.432, 5%: -2.862, 10%: -2.567
+
+**ADF Statistic:** The value of the ADF statistic indicates strongly against the null hypothesis, thus it suggests a unit root present.
+**P-value:** The p value is indeed small, almost zero, suggesting that the null hypothesis can be rejected high quite high degree of confidence.
+**Critical Values:** The ads value is more negative than the 1%, 5% and 10%, which means that we can reject the null hypothesis.
+
+## Water Consumption Forecasting
+For this water consumption forecasting, I implemented two different lstm models:
+LSTM 1: LSTM layer - Dropout layer - Dense layer - Output layer
+LSTM 2: LSTM layer - Dropout layer - LSTM layer - Dropout layer - Dense layer - Output layer
+
+### LSTM1
+
+#### 7 DAYS
+
+**Accuracy**
+
+**Loss**
+
+#### 30 DAYS
+
+**Accuracy**
+
+**Loss**
+
+#### 365 DAYS
+
+**Accuracy**
+
+**Loss**
+
+#### Comparison and thoughts:
+
+Look back	RMSE	MAE	MAPE (%)
+7	50298.7788	38121.7317	4.98562
+30	46829.9067	35608.9012	4.68242
+365	44326.1181	32747.1906	4.22688<img width="550" alt="image" src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/assets/63111398/fb5a8dd2-b62e-4838-a455-0da88313eeac">
+
+- **RMSE** tends to highlight large errors more than MAE due to the squaring of errors. This can make RMSE more sensitive to outliers compared to MAE.
+- **MAE** gives a linear representation of errors, meaning that all errors are treated equally.
+- **MAPE** is a relative measure that expresses error as a percentage.
+- As the look-back period increases, all three metrics show improvement. This suggests that including more historical data helps the model make more accurate predictions.
+- The model with a look-back of 365 days performs the best, followed by 30 days and then 7 days. This could indicate that there are long-term patterns or seasonal trends in the data that are being better captured by the longer look-back periods.
+
+**RMSE**: 
+- The RMSE decreases as the look-back period increases. Since RMSE gives a higher weight to larger errors, the decreasing trend suggests that the model with a longer look-back is making fewer large errors.
+- The significant decrease in RMSE when moving from a 7-day to a 365-day look-back period suggests that the annual patterns are important and that the model benefits from considering a full year's data.
+
+**MAE:**
+- The MAE also decreases with an increase in the look-back period, which suggests a reduction in the average magnitude of errors. Like RMSE, the improvement in MAE suggests the model's predictions are getting closer to the actual values with a longer look-back.
+
+**MAPE:**
+- The MAPE decreases with an increase in the look-back period, indicating that the relative size of the prediction errors compared to the actual values is getting smaller. This is a good sign, especially if the scale of the data and the magnitude of the water consumption values do not change significantly over time.
+- A MAPE of 4.22% for the 365-day look-back is quite low, indicating that the predictions are, on average, within 4.22% of the actual values.
+
+
+- The RMSE being higher than the MAE suggests that there are significant outliers or large variances in some of the errors. 
+- A MAPE of under 5% indicates that the model's predictions are relatively close to the actual values in percentage terms. However, depending on the domain, a 5% error rate may or may not be acceptable.
+
+### LSTM2
+
+#### 7 DAYS
+
+**Accuracy**
+
+**Loss**
+
+#### 30 DAYS
+
+**Accuracy**
+
+**Loss**
+
+#### 365 DAYS
+
+**Accuracy**
+
+**Loss**
+
+#### Comparison and thoughts:
+Look back	RMSE	MAE	MAPE (%)
+7	50689.8165	38091.9837	4.922317
+30	45944.30564	33726.2028	4.329590
+365	44309.32513	33205.60630	4.386508<img width="551" alt="image" src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/assets/63111398/f3596651-86ba-4247-814f-dc9ae7b52218">
+
+- As the look-back period increases, the model's predictive accuracy improves, which is evident from the decreasing RMSE and MAE. This suggests that including more historical data allows the LSTM to capture long-term dependencies and trends in water consumption more effectively.
+
+- The MAPE values are relatively similar across all look-back periods, suggesting that the model's predictions are generally close to the actual values in percentage terms. However, even small percentage errors can result in large absolute errors when dealing with large numbers, which might be the case here.
+
+- The slight increase in MAPE from 30 days to 365 days, despite improvements in RMSE and MAE, might indicate that while the larger errors are being reduced, smaller errors are having a more significant impact on the MAPE. This could occur if the model's predictions are more consistently close but still not perfect.
+
+### Considerations and next steps:
+
+- The model with a 365-day look-back period doesn't show a substantial improvement in MAPE compared to the 30-day model, which might suggest that a 30-day period strikes a better balance between performance and computational efficiency.
+- The improvement in RMSE and MAE with a longer look-back indicates that the model is capturing more of the variance in the data, which can be crucial for making accurate predictions in practice.
+- Consider using a longer look-back period. If the slight increase in accuracy is not critical to decision-making, a shorter look-back period may be preferred.
+- Further model tuning might be possible to improve performance, such as adjusting the number of LSTM units, adding more layers, or experimenting with different dropout rates, size of units etc.
+- Conduct additional diagnostics such as plotting residuals over time to ensure there are no remaining patterns that the model is failing to capture.
+
+### Interpretation and final thoughts:
+
+**Thoughts:**
+For both models, as the look-back period increases, the RMSE and MAE decrease, suggesting that having more historical data improves the models' predictive accuracy.
+The MAPE also generally decreases as the look-back period increases, suggesting that the models are becoming more accurate in percentage terms with more context.
+
+**Comparison:**
+The second model is slightly more complex due to the additional LSTM layer, which may require more computational resources. However, this complexity does not translate into a significant improvement in MAPE for the longer look-back periods, as shown in the tables above.
+The first model, despite being simpler, shows very competitive performance and even a slightly better MAPE for the 365-day look-back, suggesting that a simpler list model can successfully capture the patterns and components of the water consumption data.
+
+**Improvements:**
+Consider the possibility of overfitting especially on the second more complex network, and apply techniques to overcome it.
+Both models may benefit from further hyperparameter tuning, additional feature engineering, or using a different architecture altogether.
+Use a base model, coming from a research to be able to compare the results much more efficient.
