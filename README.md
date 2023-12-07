@@ -75,5 +75,18 @@ The weekly averages demonstrate that the water consumption marks high spots duri
 
 ## Timeseries Decomposition
 
+### Trend
 
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/trend.png" width="700" height="320">
+It doesn’t seem to be any specific strong trend for the water consumption, but it is noticeable a downward trend beginning around the year of 2008, suggesting a reduction in the water consumption ever since. Also, there seem to appear some cyclical patterns alternating between rises and falls, probable related to economic trends as well or other external influences.
+
+### Seasonality
+
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/seasonality.png" width="700" height="320">
+The seasonal component displays a yearly repeating pattern within the data at regular intervals. The sharp peaks and troughs suggest a strong influence of the season to the water consumption units , potentially related to population & agricultural needs or other periodic events. The steady variation, seems to be accurately captured by the additive model implanted for this decomposition. 
+
+### Residual
+
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/residuals.png" width="700" height="320">
+The residual plot displays the random fluctuations after the extraction of its trend and seasonality.  The plot exhibits occasional spikes, potentially indicating outliers or unusual occurrences not accounted for, by the model. However, the absence of a systematic pattern in the residuals is positive, indicating effective isolation of the trend and seasonal components from the initial data.
 
