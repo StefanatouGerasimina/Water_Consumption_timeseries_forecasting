@@ -11,10 +11,16 @@ The given dataset, provides hourly data on water consumption for the years 2002 
 - Datetime: This column records the date and time of the observation. The format used is 'YYYY-MM-DD HH:MM:SS’.
 - Consumption: This column shows the water consumption, presumably measured in a specific unit during each  datetime.
 
-An example of the hourly water consumption timeseries is shown bellow:
+An example of the hourly, daily and weekly water consumption timeseries is shown bellow:
 
-<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/timeseries_hourly.png" width="700" height="300">
+*Hourly Water Consumption*
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/timeseries_hourly.png" width="700" height="320">
 
+*Daily Water Consumption*
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/timeseries_daily.png" width="700" height="320">
+
+*Weekly Water Consumption*
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/timeseries_weekly.png" width="700" height="320">
 
 ## Basic Statistics
 
