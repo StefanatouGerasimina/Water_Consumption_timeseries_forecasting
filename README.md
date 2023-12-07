@@ -148,9 +148,10 @@ LSTM 2: LSTM layer - Dropout layer - LSTM layer - Dropout layer - Dense layer - 
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l1_365_acc.png" width="700" height="320">
 **Loss**
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l1_365_loss.png" width="700" height="320">
+
 #### Comparison and thoughts:
 
-<img width="550" alt="image" src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/assets/63111398/fb5a8dd2-b62e-4838-a455-0da88313eeac">
+<img width="350" height="350" alt="image" src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/assets/63111398/fb5a8dd2-b62e-4838-a455-0da88313eeac">
 
 - **RMSE** tends to highlight large errors more than MAE due to the squaring of errors. This can make RMSE more sensitive to outliers compared to MAE.
 - **MAE** gives a linear representation of errors, meaning that all errors are treated equally.
@@ -198,10 +199,7 @@ LSTM 2: LSTM layer - Dropout layer - LSTM layer - Dropout layer - Dense layer - 
 <img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/l2_365_loss.png" width="700" height="320">
 
 #### Comparison and thoughts:
-Look back	RMSE	MAE	MAPE (%)
-7	50689.8165	38091.9837	4.922317
-30	45944.30564	33726.2028	4.329590
-365	44309.32513	33205.60630	4.386508<img width="551" alt="image" src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/assets/63111398/f3596651-86ba-4247-814f-dc9ae7b52218">
+<img width="350" height="350" alt="image" src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/assets/63111398/f3596651-86ba-4247-814f-dc9ae7b52218">
 
 - As the look-back period increases, the model's predictive accuracy improves, which is evident from the decreasing RMSE and MAE. This suggests that including more historical data allows the LSTM to capture long-term dependencies and trends in water consumption more effectively.
 
