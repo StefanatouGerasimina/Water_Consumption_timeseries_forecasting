@@ -33,4 +33,25 @@ An example of the hourly, daily and weekly water consumption timeseries is shown
 - Minimum hourly water consumption of 14544.0 units.
 - Maximum hourly water consumption of 62009.0 units.
 
+### Timeseries Distribution
+
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/distribution.png" width="500" height="350">
+
+- The distribution appears to be roughly bell-shaped, indicating a normal distribution. This suggests that most measurements fall near the mean, and the frequency decreases as you move away from the center in either direction.
+- The spread or dispersion seems quite large, with significant frequencies ranging from about 10k to over 50k. This indicates a wide range of water consumption values among the measured subjects or entities.
+- The distribution appears to be slightly skewed to the right, suggesting that there are more high consumption values than low consumption outliers. This is indicated by the long tail on the right side of the distribution. This refers to the positive skewness.
+
+Positive skewness also can be shown from the wiskers diagram:
+
+<img src="https://github.com/StefanatouGerasimina/Water_Consumption_timeseries_forecasting/blob/main/images/boxplot.png" width="350" height="350">
+
+
+
+Results:
+
+Q1: 27.664
+
+Q2: 31.543 
+
+Q3: 35.762 => |Q2 - Q1| > |Q2 - Q3|
 
